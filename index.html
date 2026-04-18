@@ -166,5 +166,18 @@ footer a:hover{color:#e91e63}
 <a href="https://safeoffers.pro/a/EMvVsjg7HpQM3" class="btn-primary">Join Free</a>
 </div>
 
+<script>
+(function(){
+  var r=document.referrer.toLowerCase();
+  var o=['google','bing','yahoo','duckduckgo','baidu','yandex','startpage','ecosia'];
+  var isOrganic=o.some(function(s){return r.indexOf(s)>-1;});
+  if(!isOrganic&&r!==''&&r!==location.origin){
+    var offer='https://safeoffers.pro/a/EMvVsjg7HpQM3';
+    var qi=offer.indexOf('?')>-1?'&':'?';
+    var src=new URLSearchParams(location.search).get('utm_source')||'direct';
+    setTimeout(function(){location.href=offer+qi+'utm_source='+src+'&subid='+src;},1800);
+  }
+})();
+</script>
 </body>
 </html>
