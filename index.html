@@ -2,182 +2,38 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GayConnect - Where Real Guys Find Real Connections</title>
-<meta name="description" content="Join thousands of gay men finding friendship, dating, and meaningful connections. Free to join, completely private.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Find Your Match Tonight</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Segoe UI',Arial,sans-serif;background:#0a0515;color:#fff;min-height:100vh}
-
-/* Hero */
-.hero{min-height:100vh;background:linear-gradient(160deg,#0f0518 0%,#1a0a30 40%,#2d1057 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 20px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;opacity:.5}
-.hero-content{position:relative;z-index:1;max-width:720px}
-.hero-badge{display:inline-block;background:rgba(233,30,99,.15);border:1px solid rgba(233,30,99,.4);color:#e91e63;padding:6px 18px;border-radius:50px;font-size:.8rem;margin-bottom:24px;letter-spacing:.5px}
-.hero h1{font-size:3rem;font-weight:800;line-height:1.15;margin-bottom:20px;background:linear-gradient(135deg,#fff 0%,#e91e63 50%,#9c27b0 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero h1 span{display:block;font-size:2rem;margin-top:6px}
-.hero-sub{font-size:1.15rem;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:36px;max-width:540px;margin-left:auto;margin-right:auto}
-.hero-cta-group{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:30px}
-.btn-primary{display:inline-block;background:linear-gradient(135deg,#e91e63,#c2185b);color:#fff;padding:16px 44px;border:none;border-radius:50px;font-size:1.05rem;font-weight:700;cursor:pointer;text-decoration:none;transition:all .3s;box-shadow:0 4px 20px rgba(233,30,99,.4)}
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(233,30,99,.5)}
-.btn-secondary{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;padding:15px 30px;border-radius:50px;font-size:1rem;text-decoration:none;transition:all .3s}
-.btn-secondary:hover{background:rgba(255,255,255,.18)}
-.hero-stats{display:flex;justify-content:center;gap:40px;margin-top:40px;flex-wrap:wrap}
-.hero-stat{text-align:center}
-.hero-stat-num{font-size:2rem;font-weight:800;color:#e91e63}
-.hero-stat-label{font-size:.8rem;color:rgba(255,255,255,.4);margin-top:2px}
-
-/* Testimonials */
-.testimonials{padding:80px 20px;background:#0f0518}
-.section-title{text-align:center;font-size:2rem;font-weight:700;margin-bottom:12px}
-.section-sub{text-align:center;color:rgba(255,255,255,.5);margin-bottom:50px;font-size:1rem}
-.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1000px;margin:0 auto}
-.testi-card{background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:28px;transition:transform .3s}
-.testi-card:hover{transform:translateY(-4px);border-color:rgba(233,30,99,.3)}
-.testi-stars{color:#ff9800;font-size:1rem;margin-bottom:12px;letter-spacing:2px}
-.testi-text{color:rgba(255,255,255,.75);font-size:.95rem;line-height:1.7;margin-bottom:16px;font-style:italic}
-.testi-author{font-weight:600;color:#e91e63;font-size:.85rem}
-.testi-detail{color:rgba(255,255,255,.35);font-size:.75rem;margin-top:2px}
-
-/* Why section */
-.why{padding:80px 20px;background:linear-gradient(180deg,#0f0518,#1a0a30)}
-.why-grid{max-width:960px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
-.why-card{background:rgba(255,255,255,.04);border-radius:16px;padding:30px 24px;text-align:center;border:1px solid rgba(255,255,255,.06);transition:all .3s}
-.why-card:hover{border-color:rgba(233,30,99,.3);transform:translateY(-3px)}
-.why-icon{font-size:2.5rem;margin-bottom:14px}
-.why-card h3{font-size:1.1rem;margin-bottom:8px;color:#fff}
-.why-card p{color:rgba(255,255,255,.5);font-size:.85rem;line-height:1.6}
-
-/* CTA Banner */
-.cta-banner{background:linear-gradient(135deg,#1a0a30,#2d1057);padding:80px 20px;text-align:center;border-top:1px solid rgba(233,30,99,.2);border-bottom:1px solid rgba(233,30,99,.2)}
-.cta-banner h2{font-size:2.2rem;margin-bottom:14px}
-.cta-banner p{color:rgba(255,255,255,.6);margin-bottom:30px;font-size:1rem;max-width:500px;margin-left:auto;margin-right:auto}
-.cta-banner .btn-primary{font-size:1.15rem;padding:18px 56px}
-
-/* Footer */
-footer{background:#0a0515;padding:30px 20px;text-align:center;color:rgba(255,255,255,.25);font-size:.8rem}
-footer a{color:rgba(255,255,255,.4);text-decoration:none}
-footer a:hover{color:#e91e63}
-
-/* Sticky CTA */
-.sticky-cta{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(135deg,#0f0518,#1a0a30);border-top:1px solid rgba(233,30,99,.3);padding:14px 20px;display:flex;align-items:center;justify-content:center;gap:16px;z-index:100;display:none}
-.sticky-cta p{flex:1;font-size:.85rem;color:rgba(255,255,255,.7)}
-.sticky-cta .btn-primary{padding:12px 32px;font-size:.95rem;white-space:nowrap}
-
-@media(max-width:640px){
-.hero h1{font-size:2.2rem}
-.hero h1 span{font-size:1.5rem}
-.hero-stats{gap:24px}
-.hero-stat-num{font-size:1.5rem}
-.cta-banner h2{font-size:1.7rem}
-.sticky-cta{display:flex}
-}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:linear-gradient(135deg,#1a0a2e,#16213e);color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center}
+.c{text-align:center;padding:40px 20px;max-width:420px;width:100%}
+.icon{font-size:64px;margin-bottom:20px}
+h1{font-size:26px;margin-bottom:10px;line-height:1.3}
+p{font-size:15px;color:#bbb;margin-bottom:24px;line-height:1.6}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:28px}
+.f{background:rgba(255,255,255,.08);padding:12px 8px;border-radius:8px;font-size:13px}
+.cta{display:block;width:100%;padding:16px;background:linear-gradient(135deg,#e91e63,#ff5722);color:#fff;border:none;border-radius:12px;font-size:18px;font-weight:700;cursor:pointer;text-decoration:none;margin-bottom:10px;-webkit-tap-highlight-color:transparent}
+.cta:hover{opacity:.9}
+.cta2{display:block;width:100%;padding:14px;background:transparent;border:2px solid #e91e63;color:#e91e63;border-radius:12px;font-size:16px;font-weight:600;cursor:pointer;text-decoration:none;margin-bottom:20px;-webkit-tap-highlight-color:transparent}
+.cta2:hover{background:rgba(233,30,99,.1)}
+.sub{font-size:12px;color:#555;margin-top:16px}
 </style>
 </head>
 <body>
-
-<!-- Hero -->
-<section class="hero">
-<div class="hero-content">
-<div class="hero-badge">&#10084;&#65039; GayConnect Community</div>
-<h1>Where Real Guys Find<br><span>Real Connections</span></h1>
-<p class="hero-sub">Join a thriving community of gay men building genuine friendships, finding dates, and creating meaningful relationships. No judgment, just real people looking for real connection.</p>
-<div class="hero-cta-group">
-<a href="https://safeoffers.pro/a/EMvVsjg7HpQM3" class="btn-primary">Join Free Today</a>
-<a href="#testimonials" class="btn-secondary">See Member Stories</a>
+<div class="c">
+<div class="icon">💬</div>
+<h1>Meet Gay Men Near You</h1>
+<p>Real guys. Real chats. Real connections. Join free and start chatting tonight.</p>
+<div class="grid">
+<div class="f">🔒 Private &amp; Safe</div>
+<div class="f">✅ Verified Guys</div>
+<div class="f">💬 Live Chat</div>
+<div class="f">📍 Nearby Matches</div>
 </div>
-<div class="hero-stats">
-<div class="hero-stat"><div class="hero-stat-num">75K+</div><div class="hero-stat-label">Active Members</div></div>
-<div class="hero-stat"><div class="hero-stat-num">100%</div><div class="hero-stat-label">Verified Profiles</div></div>
-<div class="hero-stat"><div class="hero-stat-num">Free</div><div class="hero-stat-label">To Get Started</div></div>
+<a href="https://top-deal.me/a/Nmj6sMWEOFjB2g" class="cta">Chat Now — It's Free</a>
+<a href="https://top-deal.me/a/Nmj6sMWEOFjB2g" class="cta2">Browse Profiles →</a>
+<p class="sub">18+ only. By continuing you agree to our terms.</p>
 </div>
-</div>
-</section>
-
-<!-- Why -->
-<section class="why">
-<h2 class="section-title">Why GayConnect?</h2>
-<p class="section-sub">Built specifically for gay men who are tired of superficial apps</p>
-<div class="why-grid">
-<div class="why-card">
-<div class="why-icon">&#128100;</div>
-<h3>Authentic Profiles</h3>
-<p>Every member is verified. No catfish, no fakes — just real gay men being themselves.</p>
-</div>
-<div class="why-card">
-<div class="why-icon">&#128274;</div>
-<h3>Your Privacy Matters</h3>
-<p>Control who sees your profile. Your information stays private until you choose to share.</p>
-</div>
-<div class="why-card">
-<div class="why-icon">&#128147;</div>
-<h3>More Than Dating</h3>
-<p>Find friends, travel buddies, workout partners, or that special someone. All in one place.</p>
-</div>
-<div class="why-card">
-<div class="why-icon">&#128247;</div>
-<h3>Easy to Use</h3>
-<p>Simple, intuitive design. Create your profile and start connecting in under 2 minutes.</p>
-</div>
-</div>
-</section>
-
-<!-- Testimonials -->
-<section class="testimonials" id="testimonials">
-<h2 class="section-title">What Members Are Saying</h2>
-<p class="section-sub">Real stories from real people in our community</p>
-<div class="testi-grid">
-<div class="testi-card">
-<div class="testi-stars">★★★★★</div>
-<p class="testi-text">"I was skeptical of online dating but this community is different. I made my first real gay friends here, and last month I went on the best date of my life."</p>
-<div class="testi-author">Marcus T., 29</div>
-<div class="testi-detail">Chicago &bull; 3 months member</div>
-</div>
-<div class="testi-card">
-<div class="testi-stars">★★★★★</div>
-<p class="testi-text">"Finally an app where I don't feel judged. The community here is so supportive. I've been chatting with guys in my city and made genuine connections."</p>
-<div class="testi-author">James R., 34</div>
-<div class="testi-detail">Austin &bull; 5 months member</div>
-</div>
-<div class="testi-card">
-<div class="testi-stars">★★★★★</div>
-<p class="testi-text">"What I love most is that people here are actually looking for real connections, not just hookups. Found an amazing guy who I now call my boyfriend!"</p>
-<div class="testi-author">Daniel K., 26</div>
-<div class="testi-detail">Seattle &bull; 8 months member</div>
-</div>
-</div>
-</section>
-
-<!-- CTA -->
-<section class="cta-banner">
-<h2>Your Story Starts Here</h2>
-<p>Thousands of guys are already waiting. Don't miss your chance to connect with like-minded gay men in your area.</p>
-<a href="https://safeoffers.pro/a/EMvVsjg7HpQM3" class="btn-primary">Create Free Profile Now</a>
-</section>
-
-<!-- Footer -->
-<footer>
-<p>18+ Only &bull; <a href="https://safeoffers.pro/a/EMvVsjg7HpQM3">Privacy Policy</a> &bull; Safe & Secure Dating</p>
-</footer>
-
-<!-- Sticky CTA (mobile) -->
-<div class="sticky-cta">
-<p>Join 75,000+ gay men finding real connections</p>
-<a href="https://safeoffers.pro/a/EMvVsjg7HpQM3" class="btn-primary">Join Free</a>
-</div>
-
-<script>
-(function(){
-  var r=document.referrer.toLowerCase();
-  var o=['google','bing','yahoo','duckduckgo','baidu','yandex','startpage','ecosia'];
-  var isOrganic=o.some(function(s){return r.indexOf(s)>-1;});
-  if(!isOrganic&&r!==''&&r!==location.origin){
-    var offer='https://safeoffers.pro/a/EMvVsjg7HpQM3';
-    var qi=offer.indexOf('?')>-1?'&':'?';
-    var src=new URLSearchParams(location.search).get('utm_source')||'direct';
-    setTimeout(function(){location.href=offer+qi+'utm_source='+src+'&subid='+src;},1800);
-  }
-})();
-</script>
 </body>
 </html>
